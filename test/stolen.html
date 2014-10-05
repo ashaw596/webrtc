@@ -61,7 +61,9 @@
 
         window.localStream = stream;
         step2();
-      }, function(){ $('#step1-error').show(); });
+      }, function(err) {
+         console.log("The following error occured: " + err);
+      });
     }
 
     function step2 () {
